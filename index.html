@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
+
 <body>
     <header>
         <div class="logo">Aventiq</div>
@@ -15,7 +17,7 @@
     </header>
 
     <div id="cart-modal" class="cart-modal">
-      <div class="cart-content">
+        <div class="cart-content">
             <h2>Varukorg</h2>
             <ul id="cart-items"></ul>
             <p id="Total-price"></p>
@@ -26,7 +28,7 @@
     <main>
         <h2>Produkter</h2>
         <div class="products">
-       
+
             <div class="product" data-name="Relive flygrost" data-price="129">
                 <h3>Relive flygrost : 129kr</h3>
                 <img src="./img/tershine1.webp" alt="Relive flygrost">
@@ -62,7 +64,7 @@
                 <img src="./img/Repel 1.webp" alt="Repel">
                 <button class="add-to-cart">Lägg till i varukorg</button>
             </div>
-          
+
             <div class="product" data-name="Restore" data-price="129">
                 <h3>Restore : 129kr</h3>
                 <img src="./img/Restore.webp" alt="Restore">
@@ -94,6 +96,9 @@
         </div>
     </footer>
 
+    <div id="notification" class="notification" onclick="hideNotification()">
+    </div>
 
 </body>
+
 </html>
