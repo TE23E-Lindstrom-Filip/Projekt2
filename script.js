@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const addToCartButtons = document.querySelectorAll(".add-to-cart");
     const searchBar = document.querySelector(".search-bar");
     const products = document.querySelectorAll(".product");
+    
 
     let cart = {};
 
@@ -56,6 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+   
+
     // Uppdatera varukorgens UI och räkna ut totalpris
     function updateCartUI() {
         cartItemsList.innerHTML = "";
@@ -66,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
             li.classList.add("cart-item");
 
             let text = document.createElement("span");
-            
+
             let itemTotalPrice = cart[item].price * cart[item].quantity; // Beräkna totalpriset för produkten
             text.textContent = `${item} - ${cart[item].price} kr x${cart[item].quantity}`;
 
@@ -119,5 +122,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-
-

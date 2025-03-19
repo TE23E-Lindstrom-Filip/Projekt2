@@ -48,10 +48,10 @@ header {
 
 .cart-content {
     background: white;
-    padding: 10px;
-    border-radius: 20px;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
-    width: 200px;
+    width: 300px;
 }
 
 #close-cart {
@@ -125,6 +125,29 @@ footer {
     margin: 0 10px;
     font-size: 20px;
 }
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Mellanrum mellan knapparna */
+}
+
+
+.quantity-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+
+.quantity-button:hover {
+    background-color: #0056b3;
+}
+
 
 .products {
     display: grid;
