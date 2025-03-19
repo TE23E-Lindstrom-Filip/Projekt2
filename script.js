@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const addToCartButtons = document.querySelectorAll(".add-to-cart");
     const searchBar = document.querySelector(".search-bar");
     const products = document.querySelectorAll(".product");
-    
+    const notification = document.getElementById("notification");
 
     let cart = {};
 
@@ -57,7 +57,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-   
+    // Funktion för att visa notis
+    function showNotification(message) {
+        notification.textContent = message;
+        notification.style.display = "block";
+        notification.style.opacity = "1";
+
+
+        setTimeout(() => {
+            notification.style.opacity = "0";
+            setTimeout(() => {
+                notification.style.display = "none";
+            }, 500);
+        }, 2000);
+    }
 
     // Uppdatera varukorgens UI och räkna ut totalpris
     function updateCartUI() {
