@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const cartButton = document.getElementById("cart-button");
+    const cartModal = document.getElementById("cart-modal");
+    const closeCartButton = document.getElementById("close-cart");
     const searchBar = document.querySelector(".search-bar");
     const products = document.querySelectorAll(".product");
 
@@ -19,5 +21,18 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    // Öppna varukorgen
+    cartButton.addEventListener("click", function () {
+        cartModal.style.display = "flex";
+        updateCartUI();
+    });
+    
+    // Stäng varukorgen
+    closeCartButton.addEventListener("click", function () {
+        cartModal.style.display = "none";
+    });
+
+    
 
 });
