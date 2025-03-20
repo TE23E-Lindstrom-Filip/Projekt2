@@ -76,6 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateCartUI() {
         cartItemsList.innerHTML = "";
         let totalPrice = 0; // Startvärde för totalt pris
+        PriceShow = document.getElementById('Total-price');
+        PriceShow.innerHTML = `Totalt: ${totalPrice} kr`;
 
         for (let item in cart) {
             let li = document.createElement("li");
@@ -89,13 +91,10 @@ document.addEventListener("DOMContentLoaded", function () {
             totalPrice += itemTotalPrice; // Lägg till priset i totalsumman
             // Uppdatera totalpriset och visa det i varukorgen
 
-            if (cart[item] == undefined) {
-                PriceShow.innerHTML = 'Slut';
-            }
-            else {
-                PriceShow = document.getElementById('Total-price');
-                PriceShow.innerHTML = `Totalt: ${totalPrice} kr`;
-            }
+
+            PriceShow = document.getElementById('Total-price');
+            PriceShow.innerHTML = `Totalt: ${totalPrice} kr`;
+
 
             let quantityControls = document.createElement("div");
             quantityControls.classList.add("quantity-controls");
